@@ -42,18 +42,18 @@ int main()
 
 	std::ifstream file("E:\\1.Юля_учеба\\c++\\2sem\\Gun\\pushka.txt");
 	std::vector<gun_command*> vec;
-	std::string S;
-	double k;
+	std::string comand;
+	double value;
 
-	while (file >> S >> k)
+	while (file >> comand >> value)
 	{
-		if (S == "Move")
+		if (comand == "Move")
 		{
-			vec.push_back(new move(k));
+			vec.push_back(new move(value));
 		}
-		if (S == "Look_at")
+		if (comand == "Look_at")
 		{
-			vec.push_back(new look_at(k));
+			vec.push_back(new look_at(value));
 		}
 	}
 
@@ -62,7 +62,6 @@ int main()
 	std::cout << "Input start value of Position and Angle: ";
 
 	std::cin >> x0 >> angle0;
-
 	std::cout << std::endl;
 
 	gun_pos pushka;
