@@ -1,0 +1,6 @@
+Move 2
+Look_at 30
+Move -6
+Look_at 40
+Move 10
+Look_at -5
